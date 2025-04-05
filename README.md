@@ -1,5 +1,23 @@
 # java-arch-patterns
 
+> Quarkus Architecture Patterns Playground.
+
+A demonstration project showcasing various backend architecture patterns implemented with Quarkus, designed to help
+developers understand different architectural approaches in modern Java applications.
+
+## Architecture Patterns
+
+- **[Hexagonal Architecture](docs/hexagonal.md)**
+
+## Architecture of the Examples
+
+All architectural patterns are based on the same core features. The only difference lies in how the classes and
+responsibilities are distributed.
+
+![Basic Architecture](docs/basic-architecture.png)
+
+# Quarkus Infos
+
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
