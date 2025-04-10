@@ -4,8 +4,8 @@ import br.com.modules.hexagonal.application.core.domain.CreditCard;
 import br.com.modules.hexagonal.application.core.domain.Payment;
 import br.com.modules.hexagonal.application.core.domain.PaymentMethod;
 import br.com.modules.hexagonal.application.core.domain.PaymentStatus;
-import br.com.modules.hexagonal.application.ports.in.CreateCreditCardPaymentInputPort;
-import br.com.modules.hexagonal.application.ports.out.*;
+import br.com.modules.hexagonal.application.port.in.CreateCreditCardPaymentInputPort;
+import br.com.modules.hexagonal.application.port.out.*;
 
 public class CreateCreditCardPaymentUseCase implements CreateCreditCardPaymentInputPort {
 

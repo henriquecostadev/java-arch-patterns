@@ -2,9 +2,9 @@ package br.com.modules.hexagonal.application.core.use_case;
 
 import br.com.modules.hexagonal.application.core.domain.Payment;
 import br.com.modules.hexagonal.application.core.domain.PaymentStatus;
-import br.com.modules.hexagonal.application.ports.out.SelectPaymentByIdOutputPort;
-import br.com.modules.hexagonal.application.ports.out.UpdatePaymentOutputPort;
-import br.com.modules.hexagonal.fixtures.PaymentFixture;
+import br.com.modules.hexagonal.application.port.out.SelectPaymentByIdOutputPort;
+import br.com.modules.hexagonal.application.port.out.UpdatePaymentOutputPort;
+import br.com.modules.hexagonal.fixture.PaymentFixture;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

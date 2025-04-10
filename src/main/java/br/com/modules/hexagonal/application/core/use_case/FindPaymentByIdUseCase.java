@@ -1,8 +1,8 @@
 package br.com.modules.hexagonal.application.core.use_case;
 
 import br.com.modules.hexagonal.application.core.domain.Payment;
-import br.com.modules.hexagonal.application.ports.in.FindPaymentByIdInputPort;
-import br.com.modules.hexagonal.application.ports.out.SelectPaymentByIdOutputPort;
+import br.com.modules.hexagonal.application.port.in.FindPaymentByIdInputPort;
+import br.com.modules.hexagonal.application.port.out.SelectPaymentByIdOutputPort;
 
 public class FindPaymentByIdUseCase implements FindPaymentByIdInputPort {
 

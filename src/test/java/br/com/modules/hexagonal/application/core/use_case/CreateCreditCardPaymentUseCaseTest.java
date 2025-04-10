@@ -3,9 +3,9 @@ package br.com.modules.hexagonal.application.core.use_case;
 import br.com.modules.hexagonal.application.core.domain.CreditCard;
 import br.com.modules.hexagonal.application.core.domain.Payment;
 import br.com.modules.hexagonal.application.core.domain.PaymentStatus;
-import br.com.modules.hexagonal.application.ports.out.*;
-import br.com.modules.hexagonal.fixtures.CreditCardFixture;
-import br.com.modules.hexagonal.fixtures.PaymentFixture;
+import br.com.modules.hexagonal.application.port.out.*;
+import br.com.modules.hexagonal.fixture.CreditCardFixture;
+import br.com.modules.hexagonal.fixture.PaymentFixture;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

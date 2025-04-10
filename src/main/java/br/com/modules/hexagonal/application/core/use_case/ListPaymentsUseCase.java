@@ -1,8 +1,8 @@
 package br.com.modules.hexagonal.application.core.use_case;
 
 import br.com.modules.hexagonal.application.core.domain.Payment;
-import br.com.modules.hexagonal.application.ports.in.ListPaymentsInputPort;
-import br.com.modules.hexagonal.application.ports.out.SelectAllPaymentsOutputPort;
+import br.com.modules.hexagonal.application.port.in.ListPaymentsInputPort;
+import br.com.modules.hexagonal.application.port.out.SelectAllPaymentsOutputPort;
 
 import java.util.List;
 

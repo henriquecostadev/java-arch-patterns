@@ -3,11 +3,11 @@ package br.com.modules.hexagonal.application.core.use_case;
 import br.com.modules.hexagonal.application.core.domain.Payment;
 import br.com.modules.hexagonal.application.core.domain.PaymentMethod;
 import br.com.modules.hexagonal.application.core.domain.PaymentStatus;
-import br.com.modules.hexagonal.application.ports.in.CreateBitcoinPaymentInputPort;
-import br.com.modules.hexagonal.application.ports.out.InsertPaymentOutputPort;
-import br.com.modules.hexagonal.application.ports.out.PublishNewPaymentOutputPort;
-import br.com.modules.hexagonal.application.ports.out.UpdatePaymentOutputPort;
-import br.com.modules.hexagonal.application.ports.out.WithdrawBitcoinOutputPort;
+import br.com.modules.hexagonal.application.port.in.CreateBitcoinPaymentInputPort;
+import br.com.modules.hexagonal.application.port.out.InsertPaymentOutputPort;
+import br.com.modules.hexagonal.application.port.out.PublishNewPaymentOutputPort;
+import br.com.modules.hexagonal.application.port.out.UpdatePaymentOutputPort;
+import br.com.modules.hexagonal.application.port.out.WithdrawBitcoinOutputPort;
 
 public class CreateBitcoinPaymentUseCase implements CreateBitcoinPaymentInputPort {
 

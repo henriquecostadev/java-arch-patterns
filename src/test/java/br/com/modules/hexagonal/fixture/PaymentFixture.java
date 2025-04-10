@@ -1,4 +1,4 @@
-package br.com.modules.hexagonal.fixtures;
+package br.com.modules.hexagonal.fixture;
 
 import br.com.modules.hexagonal.application.core.domain.Payment;
 import br.com.modules.hexagonal.application.core.domain.PaymentMethod;

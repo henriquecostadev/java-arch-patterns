@@ -1,4 +1,4 @@
-package br.com.modules.hexagonal.application.ports.out;
+package br.com.modules.hexagonal.application.port.out;
 
 import br.com.modules.hexagonal.application.core.domain.Payment;
 
