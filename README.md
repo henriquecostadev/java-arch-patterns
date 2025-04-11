@@ -16,6 +16,17 @@ responsibilities are distributed.
 
 ![Basic Architecture](docs/basic-architecture.png)
 
+# Wiremock for local test
+
+Run the wiremock standalone server with the following command:
+
+```shell
+java -jar wire_mock/wiremock-standalone-3.12.1.jar --port 8082
+```
+
+> Use the final credit card number `1111` for success and `2222` to failure in the credit card transaction. 
+
+
 # Quarkus Infos
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.

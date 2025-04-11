@@ -41,7 +41,7 @@ class CreateCreditCardPaymentUseCaseTest {
         CreditCard creditCard = CreditCardFixture.getCreditCard();
 
         // When
-        when(authorizeCreditCardOutputPort.autorize(creditCard, payment.getAmount())).thenReturn(true);
+        when(authorizeCreditCardOutputPort.authorize(creditCard, payment.getAmount())).thenReturn(true);
 
         // Act
         createCreditCardPaymentUseCase.create(payment, creditCard);
@@ -60,7 +60,7 @@ class CreateCreditCardPaymentUseCaseTest {
         CreditCard creditCard = CreditCardFixture.getCreditCard();
 
         // When
-        when(authorizeCreditCardOutputPort.autorize(creditCard, payment.getAmount())).thenReturn(false);
+        when(authorizeCreditCardOutputPort.authorize(creditCard, payment.getAmount())).thenReturn(false);
 
         // Act
         createCreditCardPaymentUseCase.create(payment, creditCard);

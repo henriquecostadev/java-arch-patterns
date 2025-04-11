@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1/credit-card/authorize",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{ \"creditCard\": { \"cardNumber\": \"1234123412341111\" }}",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "status": 1,
+      "message": "Success"
+    }
+  }
+}

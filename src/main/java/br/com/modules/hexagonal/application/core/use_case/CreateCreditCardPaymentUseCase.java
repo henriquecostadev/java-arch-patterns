@@ -26,14 +26,14 @@ public class CreateCreditCardPaymentUseCase implements CreateCreditCardPaymentIn
         this.publishNewPaymentOutputPort = publishNewPaymentOutputPort;
     }
 
-    // Example of Single Responsiblity Principle (SRP), DRY Principle and KISS Principle problem
+    // Example of Single Responsiblity Principle (SRP) x DRY Principle and KISS Principle problem
     @Override
     public void create(Payment payment, CreditCard creditCard) {
         payment.setMethod(PaymentMethod.CREDIT_CARD);
         payment.setStatus(PaymentStatus.PENDING);
         insertPaymentOutputPort.insert(payment);
 
-        boolean isTransactionSuccessful = authorizeCreditCardOutputPort.autorize(creditCard, payment.getAmount());
+        boolean isTransactionSuccessful = authorizeCreditCardOutputPort.authorize(creditCard, payment.getAmount());
 
         payment.setStatus(isTransactionSuccessful ? PaymentStatus.COMPLETED : PaymentStatus.FAILED);
         updatePaymentOutputPort.update(payment);
