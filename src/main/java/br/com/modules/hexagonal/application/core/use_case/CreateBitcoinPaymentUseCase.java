@@ -28,7 +28,7 @@ public class CreateBitcoinPaymentUseCase implements CreateBitcoinPaymentInputPor
         this.publishNewPaymentOutputPort = publishNewPaymentOutputPort;
     }
 
-    // Example of Single Responsiblity Principle (SRP), DRY Principle and KISS Principle problem
+    // Example of Single Responsiblity Principle (SRP) x DRY Principle and KISS Principle problem
     @Override
     public void create(Payment payment, String walletId) {
         payment.setMethod(PaymentMethod.BITCOIN);

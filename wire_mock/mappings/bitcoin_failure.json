@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1/bitcoin/withdraw",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{ \"walletId\": \"2222\" }",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "status": 2,
+      "message": "Failure, no balance"
+    }
+  }
+}

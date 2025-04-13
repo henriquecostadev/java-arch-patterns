@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1/bitcoin/withdraw",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{ \"walletId\": \"1111\" }",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "status": 1,
+      "message": "Success"
+    }
+  }
+}
