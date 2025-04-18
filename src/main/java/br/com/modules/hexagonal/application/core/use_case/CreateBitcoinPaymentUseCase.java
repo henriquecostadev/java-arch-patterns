@@ -30,10 +30,12 @@ public class CreateBitcoinPaymentUseCase implements CreateBitcoinPaymentInputPor
 
     // Example of Single Responsiblity Principle (SRP) x DRY Principle and KISS Principle problem
     @Override
-    public void create(Payment payment, String walletId) {
+    public String create(Payment payment, String walletId) {
         payment.setMethod(PaymentMethod.BITCOIN);
         payment.setStatus(PaymentStatus.PENDING);
-        insertPaymentOutputPort.insert(payment);
+
+        String paymentId = insertPaymentOutputPort.insert(payment);
+        payment.setPaymentId(paymentId);
 
         boolean isTransactionSuccessful = withdrawBitcoinOutputPort.withdraw(walletId, payment.getAmount());
 
@@ -43,5 +45,7 @@ public class CreateBitcoinPaymentUseCase implements CreateBitcoinPaymentInputPor
         if (isTransactionSuccessful) {
             publishNewPaymentOutputPort.publish(payment);
         }
+
+        return paymentId;
     }
 }

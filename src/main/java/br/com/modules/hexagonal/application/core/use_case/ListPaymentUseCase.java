@@ -6,11 +6,11 @@ import br.com.modules.hexagonal.application.port.out.SelectAllPaymentsOutputPort
 
 import java.util.List;
 
-public class ListPaymentsUseCase implements ListPaymentsInputPort {
+public class ListPaymentUseCase implements ListPaymentsInputPort {
 
     private final SelectAllPaymentsOutputPort selectAllPaymentsOutputPort;
 
-    public ListPaymentsUseCase(SelectAllPaymentsOutputPort selectAllPaymentsOutputPort) {
+    public ListPaymentUseCase(SelectAllPaymentsOutputPort selectAllPaymentsOutputPort) {
         this.selectAllPaymentsOutputPort = selectAllPaymentsOutputPort;
     }
 

@@ -28,10 +28,12 @@ public class CreateCreditCardPaymentUseCase implements CreateCreditCardPaymentIn
 
     // Example of Single Responsiblity Principle (SRP) x DRY Principle and KISS Principle problem
     @Override
-    public void create(Payment payment, CreditCard creditCard) {
+    public String create(Payment payment, CreditCard creditCard) {
         payment.setMethod(PaymentMethod.CREDIT_CARD);
         payment.setStatus(PaymentStatus.PENDING);
-        insertPaymentOutputPort.insert(payment);
+
+        String paymentId = insertPaymentOutputPort.insert(payment);
+        payment.setPaymentId(paymentId);
 
         boolean isTransactionSuccessful = authorizeCreditCardOutputPort.authorize(creditCard, payment.getAmount());
 
@@ -41,5 +43,7 @@ public class CreateCreditCardPaymentUseCase implements CreateCreditCardPaymentIn
         if (isTransactionSuccessful) {
             publishNewPaymentOutputPort.publish(payment);
         }
+
+        return payment.getPaymentId();
     }
 }

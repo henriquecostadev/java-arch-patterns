@@ -12,14 +12,14 @@ import org.mockito.Mockito;
 import java.util.List;
 
 @QuarkusTest
-class ListPaymentsUseCaseTest {
+class ListPaymentUseCaseTest {
 
-    private ListPaymentsUseCase listPaymentsUseCase;
+    private ListPaymentUseCase listPaymentUseCase;
 
     @BeforeEach
     void setUp() {
         SelectAllPaymentsOutputPort selectAllPaymentsOutputPort = Mockito.mock(SelectAllPaymentsOutputPort.class);
-        this.listPaymentsUseCase = new ListPaymentsUseCase(selectAllPaymentsOutputPort);
+        this.listPaymentUseCase = new ListPaymentUseCase(selectAllPaymentsOutputPort);
     }
 
     @Test
@@ -28,10 +28,10 @@ class ListPaymentsUseCaseTest {
         List<Payment> paymentsList = List.of(PaymentFixture.getPayment(), PaymentFixture.getPayment());
 
         // When
-        Mockito.when(listPaymentsUseCase.list()).thenReturn(paymentsList);
+        Mockito.when(listPaymentUseCase.list()).thenReturn(paymentsList);
 
         // Act
-        var returnedList = listPaymentsUseCase.list();
+        var returnedList = listPaymentUseCase.list();
 
         // Assert
         Assertions.assertEquals(2, returnedList.size());

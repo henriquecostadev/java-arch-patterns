@@ -21,7 +21,9 @@ responsibilities are distributed.
 Run the wiremock standalone server with the following command:
 
 ```shell
-java -jar wire_mock/wiremock-standalone-3.12.1.jar --port 8082
+cd wire_mock
+
+java -jar wiremock-standalone-3.12.1.jar --port 8082
 ```
 
 > Use the final credit card number `1111` for success and `2222` to failure in the credit card transactions. 
