@@ -26,7 +26,7 @@ cd wire_mock
 java -jar wiremock-standalone-3.12.1.jar --port 8082
 ```
 
-> Use the final credit card number `1111` for success and `2222` to failure in the credit card transactions. 
+> Use the final credit card number `1111` for success and `2222` to failure in the credit card transactions.
 
 > Use the walletId `1111` for success and `2222` to failure in the wallet transactions.
 
@@ -44,7 +44,7 @@ You can run your application in dev mode that enables live coding using:
 ./gradlew quarkusDev
 ```
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
+> **_NOTE:_** Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
 
 ## Packaging and running the application
 
